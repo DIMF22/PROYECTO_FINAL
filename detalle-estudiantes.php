@@ -11,6 +11,7 @@ require 'conexion.php';
     <title>CRUD PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
+
   <body>
     
   <div class="container">
@@ -61,7 +62,7 @@ if(isset($_GET['id'])){
                 <div class="card-header">
                     <h4>
                         Estudiante
-                        <a href="index.php" class="btn btn-danger float-end">Regresar</a> 
+                        <a href="home.php" class="btn btn-danger float-end">Regresar</a> 
                     </h4>
                 </div>
 

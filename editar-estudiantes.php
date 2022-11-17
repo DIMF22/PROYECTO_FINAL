@@ -26,7 +26,7 @@ if(isset($_GET['id'])){
     }else{
         $_SESSION['mensaje']="No existe el estudiante";
         $_SESSION['error']=true;
-        header("location: ./index.php");
+        header("location: ./home.php");
         exit;
     }
 }
@@ -61,7 +61,7 @@ if(isset($_GET['id'])){
                 <div class="card-header">
                     <h4>
                         Editar estudiante
-                        <a href="index.php" class="btn btn-danger float-end">Regresar</a> 
+                        <a href="home.php" class="btn btn-danger float-end">Regresar</a> 
                     </h4>
                 </div>
 

@@ -42,7 +42,7 @@ require 'conexion.php';
                 <div class="card-header">
                     <h4>
                         Registro estudiantes
-                        <a href="index.php" class="btn btn-danger float-end">Regresar</a> 
+                        <a href="home.php" class="btn btn-danger float-end">Regresar</a> 
                     </h4>
                 </div>
 
