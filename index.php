@@ -1,107 +1,46 @@
-<?php
-session_start();
-require 'conexion.php';
-?>
+<center>
+    <h1>
+        ¡Bienvenidos a nuestro proyecto!
+    </h1>
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CRUD PHP</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
-  <body>
-    
-  <div class="container">
+<BR>
 
-  <?php
-        if(isset($_SESSION['mensaje'])){
-            if(!$_SESSION['error']){
-                ?>
-            <div class="alert alert-success" role="alert">
-            <?php echo $_SESSION['mensaje']; ?>
-            </div>
-        <?php
-            }else{
-                ?>
-            <div class="alert alert-danger" role="alert">
-            <?php echo $_SESSION['mensaje']; ?>
-            </div>
-        <?php
-            }
-            unset($_SESSION['mensaje']);
-            unset($_SESSION['error']);
-        }
+</center>
 
-    ?>
+<p class="p">
+    Este codigo fuente es un proyecto CRUD basico, para la gestion de datos de personas
+    (Registro de personas en php y Mysql) te permitirá tener las funcionalidades de conexión a 
+    una base de datos como lo son: CREAR, ACTUALIZAR, BORRAR y LEER VALORES. Además la funcionalidad de 
+    filtrar registros en una tabla.
+    <br><br>
+    Este proyecto está pensado para todas las personas que desean aprender acerca de la programación
+    en PHP y tener un marco de trabajo que facilite la creación de cualquier proyecto de software
+    </p>
 
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">
-                    <h4>
-                        Lista de estudiantes
-                        <a href="crear-estudiantes.php" class="btn btn-success float-end">Agregar nuevo</a> 
-                    </h4>
-                </div>
-
-                <div class="card-body">
-                
-                <table class="table table-bordered" table-striped>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>NOMBRE</th>
-                            <th>APELLIDO</th>
-                            <th>EDAD</th>
-                            <th>PAIS</th>
-                            <th>ACCIONES</th>
-                        </tr>
-
-                        <?php
-                                $res = $conexion->query("SELECT E.*,P.nombre as pais FROM `estudiantes` E INNER JOIN paises P ON P.id=E.id_pais");
-                            
-                                while($fila = $res-> fetch_object()){
-                                    ?>
-                        <tr>
-                            <td><?php echo $fila->id; ?></td>
-                            <td><?php echo $fila->nombre; ?></td>
-                            <td><?php echo $fila->apellido; ?></td>
-                            <td><?php echo $fila->edad; ?></td>
-                            <td><?php echo $fila->pais; ?></td>
-                            <td>
-                                <a href="editar-estudiantes.php?id=<?php echo md5($fila->id); ?>" class="btn btn-primary">
-                                    Editar
-                                </a>
-
-                                <a href="detalle-estudiantes.php?id=<?php echo md5($fila->id); ?>" class="btn btn-success">
-                                    Ver
-                                </a>
-
-                                <form action="guardar.php" method="POST" class="d-inline">
-                                    <button class="btn btn-danger" type="submit" name="btnEliminar" value="<?php echo md5($fila->id); ?>">
-                                        Eliminar
-                                    </button>
-                                </form>
-
-                            </td>
-                        </tr> 
-                                <?php
-                            }
-                            ?>
-                       
-                    </thead>
-                </table>
-                
-                </div>
-
-            </div>
-        </div>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Pagina de inicio</title>
+</head>
+<body>
   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
+
+    <br><br>
+    
+    <div class="shadowbox">     
+   
+<center>
+<a href="./registro.php"  rel="noopener noreferrer"><button class="button">Registro</button></a>
+<a href="./login.php"><button class="button">Login</button></a>
+
+</center>
+  
+    </div>
+
+</body>
 </html>

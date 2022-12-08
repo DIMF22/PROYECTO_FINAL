@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(224, 233, 235);
+}
+
+
+
+.button {
+    background-color: rgb(114, 98, 207);
+    border-radius: 5rem;
+    color: bisque;
+    padding: 8px 5px;
+    font-size: 15px;
+    border: 1px solid rgb(93, 89, 116);
+    box-shadow: 2px 5px 2px rgb(120, 162, 163);
+    width: 100px;
+
+}
+
+.registro{
+    border-radius: 50px;
+    width: 380px;
+    height: 290px;
+    box-shadow: 10px 15px 10px rgb(98, 150, 150);
+    text-align: center;
+    background-color: beige;
+    margin: auto;
+    border: 1px solid rgb(198, 193, 228);
+    
+}
+
+.registro1{
+    background-color: rgb(193, 187, 230);
+    border-radius: 5rem;
+    color: rgb(0, 0, 0);
+    padding: 7px 5px;
+    font-size: 15px;
+    border: 2px solid rgb(93, 89, 116);
+    box-shadow: 2px 5px 2px rgb(120, 162, 163);
+    width: 150px;
+    text-align: center;
+}
+
+.boton2{
+    background-color: rgb(114, 98, 207);
+    border-radius: 5rem;
+    color: bisque;
+    padding: 7px 5px;
+    font-size: 15px;
+    border: 1px solid rgb(93, 89, 116);
+    box-shadow: 2px 5px 2px rgb(120, 162, 163);
+    width: 100px; 
+}
+

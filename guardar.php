@@ -42,7 +42,7 @@ if($res){
     $_SESSION['mensaje'] = 'No se logró actualizar el estudiante';
     $_SESSION['error'] = true;
 }
-header("location: ./index.php");
+header("location: ./home.php");
 exit;
 
     
@@ -60,7 +60,7 @@ if($res){
     $_SESSION['mensaje'] = 'No se logró eliminarse el estudiante';
     $_SESSION['error'] = true;
 }
-header("location: ./index.php");
+header("location: ./home.php");
 exit;
     
 }
