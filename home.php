@@ -44,9 +44,12 @@ require 'conexion.php';
                     <h4>
                         Lista de estudiantes
                         <a href="crear-estudiantes.php" class="btn btn-success float-end">Agregar nuevo</a> 
+<<<<<<< HEAD
                         <a href="index.php" class="btn btn-primary float-">
                                         Cerrar sesion
                         </a>
+=======
+>>>>>>> 98caf110d08f35112fa6908c2dcd0901704ff84b
                     </h4>
                 </div>
 
@@ -87,6 +90,7 @@ require 'conexion.php';
                                     <button class="btn btn-danger" type="submit" name="btnEliminar" value="<?php echo md5($fila->id); ?>">
                                         Eliminar
                                     </button>
+<<<<<<< HEAD
 
                                     <form action="" method="post" enctype="multipart/form-data">
                                     <input type="file" name="archivo" id="archivo" class="btn btn-warning">
@@ -124,6 +128,8 @@ require 'conexion.php';
                                     ?>
 
                                     
+=======
+>>>>>>> 98caf110d08f35112fa6908c2dcd0901704ff84b
                                 </form>
 
                             </td>
